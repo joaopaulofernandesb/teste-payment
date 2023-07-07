@@ -1,5 +1,6 @@
 {
-  "name": "my-app",
+  "name": "teste-payment",
+  "hostname": "teste-payment",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
