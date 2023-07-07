@@ -1,0 +1,36 @@
+.payment-container {
+  padding-left: 10px;
+  background: #ffffff
+}
+
+.checkout-button{
+  /* background-color: rgb(107, 183, 11); */
+  background-color: #4169E1;
+}
+
+.checkout-button:hover{
+  transform: scale(1.05);
+  transition: all 0.3s ease 0s;
+  background-color: #4169E1;
+}
+
+.divButtonCustom{
+  padding-left: 10px;
+}
+.buttonCustom {
+  border: none;
+  width: 100%;
+  max-width: 580px;
+  height: 50px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  background: #489B3B;
+  border-radius: 9px;
+}
+
+.buttonCustom:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease 0s;
+  background-color: #45ac45;
+}
