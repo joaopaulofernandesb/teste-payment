@@ -20,7 +20,7 @@ jobs:
 
       - name: Build teste-payment
         run: |
-          npm install -f
+          npm install
           npm run build
 
       - name: Deploy to gh-pages
