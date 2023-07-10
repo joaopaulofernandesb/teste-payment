@@ -1,6 +1,7 @@
 {
   "name": "teste-payment",
   "hostname": "teste-payment",
+  "homepage": "https://joaopaulofernandesb.github.io/teste-payment/",  
   "version": "0.1.0",
   "private": true,
   "dependencies": {
