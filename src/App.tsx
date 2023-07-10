@@ -129,7 +129,7 @@ const App = () => {
         <label>Informe a sua EncryptKey </label>
         <br />
         <input
-          type="text"
+          type="password"
           value={encryptKey}
           onChange={handleEncryptKeyChange}
         />
