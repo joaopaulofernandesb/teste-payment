@@ -125,7 +125,6 @@ const App = () => {
           <p>{onErrors ? "Verifique o preenchimento dos campos abaixo" : ""}</p>
         </p>
 
-        {onSuccess ? <label>Success</label> : ""}
         <br />
         <label>Informe a sua EncryptKey </label>
         <br />
@@ -188,6 +187,7 @@ const App = () => {
       </div>
       <p>
         {" "}
+        {onSuccess ? <label style={{ color: "green" }}>Success</label> : ""}
         <p>{onSuccess ? JSON.stringify(onSuccess) : ""}</p>
       </p>
     </div>
