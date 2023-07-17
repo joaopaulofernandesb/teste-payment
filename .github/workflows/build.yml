@@ -13,17 +13,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Set up environment variables
+        run: echo "NPM_TOKEN=${{ secrets.TESTE_TOKEN }}" >> $GITHUB_ENV
+
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '14.x'
-
-      - name: Authenticate to GitLab registry
-        run: |
-         echo "//gitlab.gazin.com.br/api/v4/packages/npm/:_authToken=\${{ secrets.TESTE_TOKEN }}" >> .npmrc
-         npm login --registry=https://gitlab.gazin.com.br/api/v4/packages/npm/ --scope=@labs --always-auth
-         rm .npmrc
-
 
       - name: Build teste-payment
         run: |
