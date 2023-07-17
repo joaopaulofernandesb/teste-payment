@@ -13,6 +13,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Configure SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
       - name: Set up environment variables
         run: echo "NPM_TOKEN=${{ secrets.TESTE_TOKEN }}" >> $GITHUB_ENV
 
@@ -31,3 +38,4 @@ jobs:
         with:
           github_token: ${{ secrets.TESTE_TOKEN }}
           publish_dir: ./build
+
