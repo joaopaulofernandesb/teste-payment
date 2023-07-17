@@ -19,7 +19,11 @@ jobs:
           node-version: '14.x'
 
       - name: Authenticate to GitLab registry
-        run: npm login --registry=https://gitlab.gazin.com.br/api/v4/packages/npm/ --scope=@labs --always-auth --auth ${{ secrets.TESTE_TOKEN }}
+        run: |
+         echo "//gitlab.gazin.com.br/api/v4/packages/npm/:_authToken=\${{ secrets.TESTE_TOKEN }}" >> .npmrc
+         npm login --registry=https://gitlab.gazin.com.br/api/v4/packages/npm/ --scope=@labs --always-auth
+         rm .npmrc
+
 
       - name: Build teste-payment
         run: |
