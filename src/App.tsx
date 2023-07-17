@@ -87,6 +87,7 @@ const App = () => {
       paymentSubmitButtonRef.disabled = false;
       paymentSubmitButtonRef.click();
     }
+    paymentSubmitButtonRef.hidden = true;
   };
 
   const handleEncryptKeyChange = (event: any) => {
