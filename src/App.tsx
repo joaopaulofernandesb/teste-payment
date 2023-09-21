@@ -162,7 +162,7 @@ const App = () => {
       <br />
       <Payment
         amount={amount}
-        environment="homolog"
+        environment="production"
         onSubmit={onSubmit}
         onError={onError}
         fieldsError={fieldsError}
